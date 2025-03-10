@@ -125,16 +125,19 @@ int main() {
     result_pibpercapita = pibpercapita1 > pibpercapita2;
     result_super_poder = super_poder1 > super_poder2;
 
-    printf("\n================RESULTADOS==================\n");
-    printf("\n(1) = CARTA 1 VENCEU. --- (0) = CARTA 2 VENCEU.\n");
+    // estrutura de decisao (populaçao)
 
-    printf("\nPopulação: (%d)\n", result_populacao);
-    printf("Área: (%d)\n", result_area);
-    printf("PIB: (%d)\n", result_pib);
-    printf("Pontos turisticos: (%d)\n", result_pontosTuristicos);
-    printf("Densidade populacional: (%d)\n", result_densidadePopulacional);
-    printf("PIB per capita: (%d)\n", result_pibpercapita);
-    printf("Super Poder: (%d)\n", result_super_poder);
+
+    printf("============resultado do ataque!===============\n");
+
+    printf("\nComparação de cartas (Atributo: População):\n");
+
+ 
+    if (result_populacao == 1){
+        printf("Carta 1 - %s - %u\n\n", nomeCidade1, populacao1);
+    }else {
+        printf("Carta 2 - %s - %u\n\n", nomeCidade2, populacao2);
+    }
 
     return 0;
 }
